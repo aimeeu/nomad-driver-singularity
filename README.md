@@ -57,7 +57,7 @@ make test
 The Singularity Nomad driver provides an interface for using Singularity for
 running application containers.
 
-## Task Configuration
+### Task Configuration
 
 ```hcl
 task "lolcow" {
@@ -172,11 +172,11 @@ The `Singularity` driver supports the following configuration in the job spec:
   }
   ```
 
-## Networking
+### Networking
 
 Currently the `Singularity` driver only supports host networking. For more detailed instructions on how to set up networking options, please refer to the `Singularity` user guides [singularity-network](https://www.sylabs.io/guides/3.1/user-guide/networking.html).
 
-## Client Requirements
+### Client Requirements
 
 The `Singularity` driver requires the following:
 
@@ -185,7 +185,7 @@ The `Singularity` driver requires the following:
 - The Singularity driver binary placed in the `plugin_dir` directory.
 - [`Singularity`](https://github.com/sylabs/singularity) v3.1.1+
 
-## Plugin Options
+### Plugin Options
 
 - `enabled` - The `Singularity` driver may be disabled on hosts by setting this option to `false` (defaults to `true`).
 
@@ -207,14 +207,14 @@ plugin "nomad-driver-Singularity" {
 
 Please note the plugin name should match whatever name you have specified for the external driver in the `plugin_dir` directory.
 
-## Client Attributes
+### Client Attributes
 
 The `Singularity` driver will set the following client attributes:
 
 - `driver.singularity` - Set to `1` if Singularity is found and enabled on the host node.
 - `driver.singularity.version` - Version of `Singularity` e.g.: `3.1.0`.
 
-## Resource Isolation
+### Resource Isolation
 
 This driver supports CPU and memory isolation via the `Singularity` cgroups feature. Network
 isolation is supported via `--net` and `--network` feature (Singularity v3.1.1+ required).
