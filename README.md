@@ -5,7 +5,7 @@
 [![Code Coverage](https://codecov.io/gh/hpcng/nomad-driver-singularity/branch/master/graph/badge.svg)](https://codecov.io/gh/hpcng/nomad-driver-singularity)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hpcng/nomad-driver-singularity)](https://goreportcard.com/report/github.com/hpcng/nomad-driver-singularity)
 
-[Hashicorp Nomad](https://www.nomadproject.io/) driver plugin using
+[Hashicorp Nomad](https://www.hashicorp.com/en/products/nomad) driver plugin using
 [Singularity containers](https://github.com/sylabs/singularity) to execute tasks.
 
 ## Requirements
@@ -185,7 +185,7 @@ The `Singularity` driver requires the following:
 - The Singularity driver binary placed in the `plugin_dir` directory.
 - [`Singularity`](https://github.com/sylabs/singularity) v3.1.1+
 
-## Plugin Options ((#plugin_options))
+## Plugin Options
 
 - `enabled` - The `Singularity` driver may be disabled on hosts by setting this option to `false` (defaults to `true`).
 
